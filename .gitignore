@@ -1,0 +1,12 @@
+# Virtual Env
+venv
+env
+__pycache__/
+
+# DB
+*.sqlite3
+
+
+.idea/
+.env
+static/
