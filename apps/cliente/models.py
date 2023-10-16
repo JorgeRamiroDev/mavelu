@@ -4,6 +4,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 
 
 class CustomUserManager(BaseUserManager):
+    
     def create_user(self,email, password=None, **extra_fields):
         if not email:
             raise ValueError('O Email é obrigatório!')
@@ -13,9 +14,6 @@ class CustomUserManager(BaseUserManager):
         user.save(using=self.db)
         return user
     
-    
-    
-
     def create_superuser(self,email,password=None, **extra_fields):
         extra_fields.setdefault('is_staff',True)
         extra_fields.setdefault('is_superuser',True)
@@ -39,6 +37,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['first_name','last_name']
+
     objects = CustomUserManager()
 
     def __str__ (self):
