@@ -107,7 +107,7 @@ section>ul>li>.slide-img{
     border-radius: 20px;
     box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
  }
- .buy-btn:hover{
+ .buy-btn:hover, .buy-btn:active{
     color: #FFFFFF;
     background-color: #fa92c2;
     transition: all ease 0.3s
@@ -178,14 +178,14 @@ h3{
     margin: 5vh 2.5% 7vh 2.5%;
 }
 
-.eachProduct:hover{
+.eachProduct:hover, .eachCategory:active{
     /* background-color: #2b2b2b3e; */
     /* filter: blur(1px); */
     filter: opacity(27.5%);
     transition: transform 0.5s ease-in-out 0.1s;
 }
 
-.eachCategory:hover{
+.eachCategory:hover, .eachCategory:active{
     filter: opacity(27.5%);
     transition: transform 0.5s ease-in-out 0.1s;
 }
