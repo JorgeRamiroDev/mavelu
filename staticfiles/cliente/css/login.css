@@ -1,0 +1,167 @@
+:root{
+    --small-font: 0.7em;
+    --main-font: 16px;
+    --header-font: 18px;
+    --important-font: 2.5rem;
+    --backgrounc-color: #e9f7ff;
+    --color-primary-light-hover: #bdd8e7;
+    --color-dark-text: #444;
+    --color-info-light: #cce5ff;
+    --color-debug-light: #cce5ff;
+    --color-success-light: #d4edda;
+    --color-alert-light: #fff3cd;
+    --color-warning-light: #fff3cd;
+    --color-error-light: #f8d7da;
+    --svg-min-size: 1em;
+    --svg-size: 2em;
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    color: var(--color-dark-text);
+    font-size: var(--main-font);
+    background-color: var(--backgrounc-color);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.backHomeLoginPage{
+    width: 100%;
+    height: 100%;
+    min-height: 10dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backHomeButton{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.backHomeButton>img{
+    max-width: 10%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    background: rgb(233,247,255);
+    background: linear-gradient(180deg, rgba(233,247,255,1) 0%, rgba(30,122,195,0.9023984593837535) 71%, rgba(217,219,218,0.9248074229691877) 100%);
+
+}
+
+main>section{
+    background-color: transparent;
+    width: 100%;
+    height: 90%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+h1{
+    color: rgba(0, 0, 0, 0.692);
+    margin-bottom: 10vh;
+}
+.loginLogout{
+    display: flex;
+    flex-direction: column;
+}
+
+.LoginForm{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    width: 50%;
+    height: 40%;
+}
+
+.input-group{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    min-height: 8%;
+    height: 10%;
+    justify-content: center;
+    align-items: start;
+    margin-top: 1.5vh;
+}
+
+.input-group>input, .SubmitButton{
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 30px;
+    height: 65%;
+    border: 2px solid rgb(71, 120, 148);
+    padding-left: 5%;
+    color: #e9f7ff;
+}
+.input-group>label{
+    margin-left: 10%;
+    font-family: var(--font);
+    font-size: var(--important-font);
+}
+
+.SubmitButton{
+    /* background: rgb(233,247,255); */
+    background: linear-gradient(90deg, rgba(233,247,255,1) 0%, rgba(102,102,181,1) 35%, rgba(68, 0, 255, 0.336) 100%);
+    border: 2px solid white;
+    border-radius: 30px;
+    min-height: 6vh;
+    height: 6vh;
+    align-items: center;
+    color: #444;
+    font-size: 1.5em;
+    margin-top: 5vh;
+}
+
+.SubmitButton:hover{
+    border: 1px solid #444;
+    background: linear-gradient(75deg, rgba(68, 0, 255, 0.336) 0%, rgba(102,102,181,1) 35%, rgba(233,247,255,1) 100%);
+    transition: all 0.5s ease-in-out 0.1s;
+    width: calc(80%+2vw);
+}
+
+.input-group>input:hover{
+    color: #000;
+    font-size: 1.15em;
+    transition: all 0.5s ease-in-out 0.1s;
+    border-width: 2px;
+    border-style: solid;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.backHomeLoginPage>a{
+    position: absolute;
+    left: 5%;
+    font-size: 1.15em;
+    font-weight: 700;
+    font-family: var(--font);
+    color: #444;
+}
+
+.backHomeLoginPage>a>img{
+    max-width: 50px;
+    top: 5%;
+}
