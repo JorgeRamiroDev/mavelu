@@ -25,7 +25,7 @@
   <script src="../../../staticfiles/js/carrousel.js"></script>
 </head>
 <body>
-  <header>
+  <header class="desktopHeader">
     <div class="nav-container">
       <nav>
         <div class="align_nav">
@@ -106,8 +106,27 @@
       </nav>
     </div>
   </header>
+
+  <div class="phoneHeader"> 
+    <ul>
+      <li class="PhoneLogo">
+        <a href="./home.html"><img src="../../../staticfiles/img/atfd.png" alt="logo"></a>
+      </li>
+      <li class="search_bar">
+        <div class="search">
+          <div class="icon"></div>
+          <div class="input">
+            <input type="text" placeholder="Buscar..." id="mysearch">
+          </div>
+          <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+          </div>
+        </li>
+    </ul>
+  </div>
+
   <!-- inicio do conteudo da pagina -->
-  <h1>Conheça as nossas promoções exclusivas</h1>
+  <h1 class="desktopResponsive">Conheça as nossas promoções exclusivas</h1>
+  <h1 class="phoneResponsive">Promoções</h1>
   <ul id="autoWidth" class="cs-hidden">
     <li class="item-a">
       <div class="box">
@@ -290,7 +309,7 @@
   <div class="ourProducts">
     <h2>Mais produtos...</h2>
   </div>
-  <section>
+  <section class="mainSection">
     <main>
       <!-- products template -->
       <ul id="autoWidth" class="allProducts cs-hidden" >
@@ -552,7 +571,7 @@
       <h3>
         Explore por categoria
       </h3>
-      <section>
+      <section class="categorySection">
         <ul id="productSlider" class="carrosel">
 
           <li class="containerCarrosel eachCategory">
@@ -937,7 +956,7 @@
 
     <div class="category">
 
-      <ul class="footerList socialMedias">
+      <ul class="footerList">
         <li class="footerListItem">
           <span>
             Redes sociais
