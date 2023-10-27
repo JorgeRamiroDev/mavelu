@@ -112,12 +112,12 @@ h1{
     margin-left: 10%;
     font-family: var(--font);
     font-size: var(--important-font);
+    margin-bottom: 1vh;
 }
 
 .SubmitButton{
     /* background: rgb(233,247,255); */
-    background: linear-gradient(90deg, rgba(233,247,255,1) 0%, rgba(102,102,181,1) 35%, rgba(68, 0, 255, 0.336) 100%);
-    border: 2px solid white;
+    background: linear-gradient(90deg, rgba(68, 0, 255, 0.082) 0%, rgb(102, 169, 181) 35%, rgba(233,247,255,1) 100%);
     border-radius: 30px;
     min-height: 6vh;
     height: 6vh;
@@ -125,25 +125,36 @@ h1{
     color: #444;
     font-size: 1.5em;
     margin-top: 5vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
 }
 
 .SubmitButton:hover{
     border: 1px solid #444;
-    background: linear-gradient(75deg, rgba(68, 0, 255, 0.336) 0%, rgba(102,102,181,1) 35%, rgba(233,247,255,1) 100%);
-    transition: all 0.5s ease-in-out 0.1s;
+    background: linear-gradient(75deg, rgba(255, 174, 0, 0.336) 0%,rgb(151, 181, 102) 35%, rgba(233, 255, 254, 0.404) 100%);
+    transition: all 0.25s ease-in-out 0.1s;
     width: calc(80%+2vw);
+    letter-spacing: 2.5px;
+    font-size: 1.67em;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
-.input-group>input:hover{
+.input-group>input:hover, .input-group>input:active{
     color: #000;
     font-size: 1.15em;
-    transition: all 0.5s ease-in-out 0.1s;
-    border-width: 2px;
+    transition: all 0.2s ease-in-out 0.1s;
+    border-width: 1px;
     border-style: solid;
     border-top: 0;
     border-bottom: 0;
 }
-
+input{
+    color: #444 !important;
+}
 a{
     text-decoration: none;
     color: black;
