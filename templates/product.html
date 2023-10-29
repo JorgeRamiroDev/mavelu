@@ -14,15 +14,15 @@
     <meta property="og:description" content="Material esportivo em geral ">
     <meta property="og:url" content="https://www.mavelu.com.br">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../staticfiles/img/atfd.png" type="image/x-icon">
-    <link rel="stylesheet" href="../staticfiles/cliente/css/cliente.css">
-    <link rel="stylesheet" href="../staticfiles/css/product.css">
-    <link rel="stylesheet" href="../staticfiles/css/lightslider.css">
+    <link rel="shortcut icon" href="{% static '../staticfiles/img/atfd.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static '../staticfiles/cliente/css/cliente.css' %}">
+    <link rel="stylesheet" href="{% static '../staticfiles/css/product.css' %}">
+    <link rel="stylesheet" href="{% static '../staticfiles/css/lightslider.css' %}">
     
-    <script src="../staticfiles/js/Jquery.js"></script>
-    <script src="../staticfiles/js/lightslider.js"></script>
-    <script src="../staticfiles/cliente/js/cliente.js"></script>
-    <script src="../staticfiles/js/carrousel.js"></script>
+    <script src="{% static ' ../staticfiles/js/Jquery.js' %}"></script>
+    <script src="{% static '../staticfiles/js/lightslider.js' %}"></script>
+    <script src="{% static '../staticfiles/cliente/js/cliente.js' %}"></script>
+    <script src="{% static '../staticfiles/js/carrousel.js' %}"></script>
 </head>
 <body>
     <header class="desktopHeader">
@@ -111,7 +111,7 @@
             <section class="productImageContainer">
                 <div class="containerImg">
                   <!-- coloca o link da imagem do produto -->
-                    <img src="../staticfiles/products/black_friday_banner_17.jpg" alt="">
+                    <img src="{% static '../staticfiles/products/black_friday_banner_17.jpg' %}" alt="">
                     <a href="#">
                         <div class="productResumedInfo">
                           <!-- coloca o nome do produto -->
