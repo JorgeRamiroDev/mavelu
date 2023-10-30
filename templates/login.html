@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,7 +21,7 @@
         <link rel="stylesheet" href="{% static '../staticfiles/css/product.css' %}">
         <link rel="stylesheet" href="{% static '../staticfiles/css/lightslider.css' %}">
         
-        <script src="{% static ' ../staticfiles/js/Jquery.js' %}"></script>
+        <script src="{% static '../staticfiles/js/Jquery.js' %}"></script>
         <script src="{% static '../staticfiles/js/lightslider.js' %}"></script>
         <script src="{% static '../staticfiles/cliente/js/cliente.js' %}"></script>
         <script src="{% static '../staticfiles/js/carrousel.js' %}"></script>
@@ -39,12 +40,12 @@
             <form action="#" method="post" class="LoginForm container widthPattern">
                 <h1>Faça o seu login</h1>
                 <div class="emailForm input-group">
-                    <label class="input-group__label" for="Email">Email</label>
-                    <input class="input-group__input" type="email" name="Email" id="Email myInput" placeholder="Insira o seu Email" required>
+                    <input type="email" class="form-control" id="pxp-signin-page-email" placeholder="Email address">
+                        <label for="pxp-signin-page-email">Email</label>
                 </div>
                 <div class="senhaForm input-group">
-                    <label class="input-group__label" for="senhaForm">Senha</label>
-                    <input class="input-group__input" type="password" name="senhaForm" id="senhaForm myInput" placeholder="Crie a sua senha" required>
+                    <input type="password" class="form-control" id="pxp-signin-page-password" placeholder="Password">
+                    <label for="pxp-signin-page-password">Senha</label>
                 </div>
                 <div class="input-group">
                     <button type="submit" class="SubmitButton">Enviar</button>

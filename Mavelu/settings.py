@@ -13,10 +13,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 
-
+AUTH_USER_MODEL = 'auth.User'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
 
 
  
@@ -33,7 +35,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTH_USER_MODEL = 'cliente.CustomUser' 
+
 
 # Application definition
 
@@ -135,8 +137,8 @@ STATIC_URL = '/staticfiles/'
 STATICFILES_DIRS = [
 
                     os.path.join(BASE_DIR,  'static'),
-                    os.path.join(BASE_DIR, './apps/cliente/static'),
-                    os.path.join(BASE_DIR, './apps/produto/static'), 
+            
+
                     ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
