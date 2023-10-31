@@ -1,11 +1,11 @@
 from django.db import models
-from apps.cliente.models import CustomUser
+from django.contrib.auth.models import User
 from apps.produto.models import ItemOrder
 
 # Create your models here.
 
 class Order(models.Model):
-    cliente = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    cliente = models.OneToOneField(User, on_delete=models.CASCADE)
     status = models.BooleanField()
     data_pedido = models.DateTimeField(auto_now_add=True)
     data_envio = models.DateTimeField(null=True, blank=True)
@@ -13,7 +13,7 @@ class Order(models.Model):
     itens = models.ManyToManyField(ItemOrder)
 
     def __str__(self):
-        return f'Pedido de {self.cliente.email}'
+        return f'Pedido de {self.cliente}'
     
     def status(self):
         if self.status:
@@ -21,4 +21,5 @@ class Order(models.Model):
         else:
             return "Processado"
         
+
     
