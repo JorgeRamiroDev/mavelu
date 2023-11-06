@@ -38,6 +38,7 @@
     <main class="mainLoginSection">
         <section class="loginLogout">
             <form action="#" method="post" class="LoginForm container widthPattern">
+                {% csrf_token %}
                 <h1>Faça o seu login</h1>
                 <div class="emailForm input-group">
                     <input type="email" class="form-control" id="pxp-signin-page-email" placeholder="Email address">
