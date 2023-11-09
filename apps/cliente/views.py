@@ -25,18 +25,18 @@ def create_user(request):
 def entrar(request):
     form = UserForm(request.POST or None, request.FILES or None)
     if form.is_valid():
-        username = form.cleaned_data['username']
+        email = form.cleaned_data['email']
         password = form.cleaned_data['password']
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=email, password=password)
         if user is not None:
             login(request, user)
-            return ('/home')
+            return ('')
         else:
-            form.add_error(None, 'Nome de usuário ou senha incorretos')
-    return render(request, "login.html", {'form': form})
+            form.add_error(None, 'email ou senha incorretos')
+    return render(request, "home.html", {'form': form})
 
 
 @login_required(login_url='/entrar')
 def sair(request):
     logout(request)
-    return redirect('/home')
+    return redirect('')
