@@ -1,7 +1,7 @@
 from django.shortcuts import render
-
+from .models import ItemOrder
 # Create your views here.
 
 def produto(request):
-    
-    return render(request, "product.html")
+    itens = ItemOrder.objects.all()
+    return render(request, 'home.html',{"itens":itens})

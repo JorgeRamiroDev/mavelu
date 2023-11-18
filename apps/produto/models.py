@@ -27,6 +27,7 @@ class ItemOrder(models.Model):
     descricao = models.TextField()
     fornecedor = models.ForeignKey(Fornecedor, on_delete=models.CASCADE)
     categoria = models.ForeignKey(Categorie,on_delete=models.DO_NOTHING)
+    imagem = models.ImageField(upload_to="foto_perfil/")
     
 
     

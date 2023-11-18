@@ -38,35 +38,44 @@
 
 <!--Primeiro for acima-->
   <!-- carrosel de ofertas -->
+
+  <!-- segundo for-->
+
+  
   <div class="ourProducts">
     <h2>Mais produtos...</h2>
   </div>
   <section class="mainSection">
     <main>
       <!-- products template -->
-      <ul id="autoWidth" class="allProducts cs-hidden" >
-        <li class="eachProduct item-a">
-          <a href="./product.html">
-            <img src="{% static 'img/products/08feb7.jpg' %}" alt="">
-            <span class="productDiscount">-37% OFF</span>
-            <span class="productDescription">
-              Tênis Nike Run Swift 3 Masculino
-            </span>
-            <div class="prices">
-              <span class="productOriginalPrice">
-                R$ 346,34
+      <ul id="autoWidth" class="allProducts cs-hidden">
+        {% if itens %}
+           {% for item in itens %}
+           <li class="eachProduct item-a">
+            <a href="./product.html">
+              <img src="{{item.imagem.url}}" alt="">
+              <span class="productDiscount">-37% OFF</span>
+              <span class="productDescription">
+                {{item.nome_produto}}
               </span>
-              <span class="productNewPrice">
-                R$ 233,54 No Pix
-              </span>
-              <span class="ProductInstallments">
-                ou 3x de 75,99
-              </span>
-            </div>
-          </a>
-        </li>
-      </ul>
-      
+              <div class="prices">
+                <span class="productOriginalPrice">
+                  R$ 346,34
+                </span>
+                <span class="productNewPrice">
+                  R$ 233,54 No Pix
+                </span>
+                <span class="ProductInstallments">
+                  ou 3x de 75,99
+                </span>
+              </div>
+            </a>
+          </li>
+           {% endfor %}
+        {% else %}
+           <li>Nenhum item disponível.</li>
+        {% endif %}
+     </ul> 
     </main>
     <div class="categoryRow">
       <h3>
