@@ -14,7 +14,7 @@ class Fornecedor(models.Model):
 
 class Categorie(models.Model):
     nome_categorie = models.CharField(max_length=100)
-  
+    imagem = models.ImageField(upload_to="foto_categorie/")
 
 
     def __str__(self):

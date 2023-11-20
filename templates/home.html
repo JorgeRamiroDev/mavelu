@@ -12,10 +12,12 @@
   <h1 class="desktopResponsive">Conheça as nossas promoções exclusivas</h1>
 
   <ul id="autoWidth" class="cs-hidden">
+
+    {%for item in itens%}
     <li class="item-a">
       <div class="box">
         <div class="slide-img">
-          <img src="{% static '1.jpg' %}" alt="1"> 
+          <img src="{{item.imagem.url}}" alt="1"> 
           <!-- overlayer -->
           <div class="overlay">
             <!-- buy-btn -->
@@ -25,14 +27,15 @@
         <!-- detail box -->
         <div class="detail-box">
           <div class="type">
-            <a href="./product.html">Rabbed Cardigan</a>
-            <span>Noe Arrival</span>
+            <a href="./product.html">{{item.nome_produto}}</a>
+            
           </div>
           <!-- prices -->
           <a href="#" class="price">R$ 23,99</a>
         </div>
       </div>  
     </li>
+    {%endfor%}
   </ul>
 
 
@@ -50,28 +53,29 @@
       <!-- products template -->
       <ul id="autoWidth" class="allProducts cs-hidden">
         {% if itens %}
-           {% for item in itens %}
-           <li class="eachProduct item-a">
-            <a href="./product.html">
-              <img src="{{item.imagem.url}}" alt="">
-              <span class="productDiscount">-37% OFF</span>
-              <span class="productDescription">
-                {{item.nome_produto}}
-              </span>
-              <div class="prices">
-                <span class="productOriginalPrice">
-                  R$ 346,34
+          {% for item in itens %}
+            <li class="eachProduct item-a">
+              
+              <a href="./product.html">
+                <img src="{{item.imagem.url}}" alt="">
+                <span class="productDiscount">-37% OFF</span>
+                <span class="productDescription">
+                  {{item.nome_produto}}
                 </span>
-                <span class="productNewPrice">
-                  R$ 233,54 No Pix
-                </span>
-                <span class="ProductInstallments">
-                  ou 3x de 75,99
-                </span>
-              </div>
-            </a>
-          </li>
-           {% endfor %}
+                <div class="prices">
+                  <span class="productOriginalPrice">
+                    R$ {{item.preco}}
+                  </span>
+                  <span class="productNewPrice">
+                    R$ {{item.preco}} No Pix
+                  </span>
+                  <span class="ProductInstallments">
+                    ou 3x de 75,99
+                  </span>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
         {% else %}
            <li>Nenhum item disponível.</li>
         {% endif %}
@@ -83,12 +87,13 @@
       </h3>
       <section class="categorySection">
         <ul id="productSlider" class="carrosel">
-
+          {%for categoria in categorias%}
           <li class="containerCarrosel eachCategory">
             <a href="#" class="slide-img" id="img">
-              <img src="{% static 'temp/websiteplanet-dummy-400X400.png' %}" alt="">
+              <img src="{{categoria.imagem.url}}" alt="">
             </a>
           </li>
+          {%endfor%}
         </ul>
       </section>
     </div>
@@ -97,16 +102,18 @@
     <section class="mostSelled">
       <h3>Mais Vendidos</h3>
       <ul id="autoWidth" class="allProducts cs-hidden" >
+
+        {%for item in itens%}
         <li class="eachProduct item-a">
           <a href="./product.html">
-            <img src="{% static 'img/products/black_friday_banner_17.jpg' %}" alt="">
+            <img src="{{item.imagem.url}}" alt="">
             <span class="productDiscount">-37% OFF</span>
             <span class="productDescription">
-              Tênis Nike Run Swift 3 Masculino
+              {{item.nome_produto}}
             </span>
             <div class="prices">
               <span class="productOriginalPrice">
-                R$ 346,34
+                {{item.preco}}
               </span>
               <span class="productNewPrice">
                 R$ 233,54 No Pix
@@ -117,6 +124,7 @@
             </div>
           </a>
         </li>
+        {%endfor%}
       </ul>
     </section>
   </div>
