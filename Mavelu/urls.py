@@ -16,10 +16,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
+from apps.produto.views import*
+from apps.cliente.views import*
+from apps.pedido.views import*
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('apps.cliente.urls'))
+    path('', include('apps.cliente.urls')),
+    path('', include('apps.produto.urls')),
+  
+   
+    
+
+    
     
     
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
